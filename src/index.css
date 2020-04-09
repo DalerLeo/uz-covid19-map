@@ -62,7 +62,7 @@ body {
 }
 h1 {
   margin-bottom: 50px;
-  line-height: 115px;
+  line-height: 115%;
 }
 
 /*
@@ -157,17 +157,6 @@ h1 {
   background-color: #21252b;
 }
 
-@media only screen and (max-width: 600px) {
-  .mapWrapper {
-    width: 100%;
-  }
-
-  .mainInfo {
-    width: 100%;
-  }
-
-}
-
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -183,6 +172,22 @@ h1 {
     padding-bottom: 15px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .mapWrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .mainInfo {
+    width: 100%;
+    padding: 40px 10px;
+
+  }
+
+}
+
+
 @media only screen and (min-width: 600px) {
   .mapWrapper {
     display: block;
