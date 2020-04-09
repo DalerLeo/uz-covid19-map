@@ -49,6 +49,7 @@ body {
 }
 
 .mapWrapper {
+  display: block;
   margin-top: 40px;
   width: calc(100% - 600px);
   padding: 0 40px;
@@ -61,6 +62,7 @@ body {
 }
 h1 {
   margin-bottom: 50px;
+  line-height: 115px;
 }
 
 /*
@@ -169,13 +171,29 @@ h1 {
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 400px) {
+  .list {
+    display: none;
+  }
+
+}
+@media only screen and (max-width: 460px) {
+  .box {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+}
 @media only screen and (min-width: 600px) {
   .mapWrapper {
+    display: block;
     width: 100%;
+    padding: 0 10px;
   }
 
   .mainInfo {
+    display: block;
     width: 100%;
+    padding: 40px 10px;
   }
 
 }
@@ -183,10 +201,15 @@ h1 {
 @media only screen and (min-width: 768px) {
   .mapWrapper {
     width: calc(100% - 600px);
+    padding: 0 10px;
+    display: block;
   }
 
   .mainInfo {
+    display: block;
     width: 600px;
+    padding: 40px 10px;
+
   }
 
 }
