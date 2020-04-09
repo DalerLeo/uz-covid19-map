@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {PATHS} from "./constants";
 
 const Map = props => {
@@ -13,9 +13,16 @@ const {onSelect, selected} = props
     }
   }
 
-  const onMouseLeave = () => {
+  const onDisabled = () => setVisible(false)
 
-}
+  useEffect(() => {
+    document.addEventListener('scroll', onDisabled)
+
+    return () => document.removeEventListener('scroll', onDisabled)
+  }, [])
+
+  const onMouseLeave = () => setVisible(false)
+/*
   const onTouchStart = ev => {
     onVisible()
     const rect = ev.target.getBoundingClientRect();
@@ -26,6 +33,7 @@ const {onSelect, selected} = props
     setCord({top: top - 30 +'px', left: left+'px', title, id, inf})
 
   }
+*/
   const onMouseEnter = ev => {
     onVisible()
     var x = ev.clientX;
