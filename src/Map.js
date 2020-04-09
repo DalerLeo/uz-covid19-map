@@ -13,15 +13,15 @@ const {onSelect, selected} = props
     }
   }
 
-  const onDisabled = () => setVisible(false)
+  const onMouseLeave = () => visible && setVisible(false)
+
 
   useEffect(() => {
-    document.addEventListener('scroll', onDisabled)
+    document.addEventListener('scroll', onMouseLeave)
 
-    return () => document.removeEventListener('scroll', onDisabled)
+    return () => document.removeEventListener('scroll', onMouseLeave)
   }, [])
 
-  const onMouseLeave = () => setVisible(false)
 /*
   const onTouchStart = ev => {
     onVisible()
