@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import Info from './Info'
 import './App.css';
-
+import Map from './Map'
+import InfoList from "./InfoList";
 function App() {
+
+  const [selected, setSelected] = useState('')
+  const onSelect = (val) => setSelected(val)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Map onSelect={onSelect} selected={selected}/>
+      <div className="mainInfo">
+
+      <Info/>
+      <InfoList onSelect={onSelect} selected={selected}/>
+      </div>
     </div>
   );
 }
