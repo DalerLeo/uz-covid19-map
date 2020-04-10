@@ -40,24 +40,25 @@ const {onSelect, selected} = props
     var y = ev.clientY;
     const title = ev.target.dataset.title
     const inf = ev.target.dataset.inf
+    const cured = ev.target.dataset.cured
     const id = ev.target.id
 //    const rect = ev.target.getBoundingClientRect();
 //    const bodyRect = document.body.getBoundingClientRect()
 //    const top = rect.top - bodyRect.top + rect.height/2;
 //    const left = x + rect.width/3;
 
-    setCord({top: y - 30 +'px', left: x+'px', title, id, inf})
+    setCord({top: y - 30 +'px', left: x+'px', title, id, inf, cured})
   }
 
   const onClick = (ev) => {
     onSelect(ev.target.id)
   }
-  const {title, id, inf, ...rest} = cord
+  const {title, id, inf, cured, ...rest} = cord
   return (
     <div className='mapWrapper'>
       <h1>COVID-19 O'zbekiston viloyatlari bo'yicha tarqalishi</h1>
       <div className="map">
-        {visible && <div className="tooltip" style={rest}>{title} - {inf}</div>}
+        {visible && <div className="tooltip" style={rest}>{title} - {inf} / {cured}</div>}
         <svg
           version="1.1"
           id="Слой_1"
