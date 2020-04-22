@@ -1,9 +1,9 @@
 
 
 export const TOTALS = {
-  cases: 1657,
-  cured: 357,
-  death: 6
+  cases: 1692,
+  cured: 424,
+  death: 7
 }
 
 export const KHOREZM = 'khu'
@@ -26,7 +26,7 @@ export const PATHS = [
     id: KHOREZM,
     'data-title': 'Xorazm',
     'data-inf': '59',
-    'data-cured': '10',
+    'data-cured': '45',
     'data-death': '0',
     d: `M605.6,610.7c-0.9-1.2-2-2.3-3-3.4c-1-1-2-2.1-2.9-3.2c-0.5-0.6-1-1.3-1.4-1.9c-0.7-1-1.5-2.1-2.3-3
 \tc-0.5-0.6-1.1-1.1-1.6-1.6c-0.7-0.7-1.5-1.4-2.2-2.2s-1.3-1.6-1.9-2.5c-1,0.4-2.2,0.6-3.6,0.6h-0.6c-0.7,0-1.5-0.1-2.2-0.4
@@ -640,7 +640,7 @@ export const PATHS = [
     id: NUKUS,
     'data-title': 'Qoraqalpog\'iston Respublikasi',
     'data-inf': '16',
-    'data-cured': '0',
+    'data-cured': '15',
     'data-death': '0',
     d: `M561.5,422.4c0.1-1.5,0.2-2.9,0.6-4.2c0.6-1.9,1.7-3.8,2.8-5.7c0.4-0.7,0.7-1.3,1.1-1.9l52.3-94.4
 \t\tc0.3-0.5,0.3-1.2,0.1-1.7c-0.2-0.6-0.7-1-1.2-1.2l-23.6-8.5c-1.8-0.6-3.2-1.9-4.1-3.6c-3.4-6.5-6-11.5-7.5-14.4
