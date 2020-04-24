@@ -1,8 +1,8 @@
 
 
 export const TOTALS = {
-  cases: 1692,
-  cured: 450,
+  cases: 1778,
+  cured: 563,
   death: 7
 }
 
